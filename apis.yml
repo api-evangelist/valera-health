@@ -1,17 +1,35 @@
 aid: valera-health
 name: Valera Health
-description: 'Valera Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Valera Health is a Brooklyn, New York based virtual behavioral health
+  provider delivering therapy, psychiatry, group therapy, comprehensive Dialectical
+  Behavior Therapy (DBT), suicide care and youth support programs to adults and children
+  through an in-house clinical team, a care-coordinator model and a patient mobile
+  app. It is a care-delivery organization rather than a software vendor: revenue comes
+  from commercial insurance, Medicaid and Medicare reimbursement, and the clinical
+  record and patient portal run on third-party health IT (the patient portal is operated
+  by NextGen Healthcare at pxpportal.nextgen.com). As of this profile Valera Health
+  publishes no developer program, no public API reference, and no machine-readable
+  contract of any kind; its only externally addressable API host, api.valerahealth.com,
+  is the private backend for its own patient application.'
+image: https://www.valerahealth.com/wp-content/uploads/2025/01/valera-home-main-1024x966.jpg
 url: https://raw.githubusercontent.com/api-evangelist/valera-health/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Health
+- Healthcare
+- Behavioral Health
+- Mental Health
+- Telehealth
+- Telemedicine
+- Psychiatry
+- Digital Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,48 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.valerahealth.com/
+- type: Blog
+  url: https://www.valerahealth.com/blog/
+- type: HelpCenter
+  url: https://www.valerahealth.com/help-center/
+- type: Support
+  url: https://www.valerahealth.com/contact-us/
+- type: TermsOfService
+  url: https://www.valerahealth.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.valerahealth.com/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/valerahealth
+- type: Conformance
+  url: conformance/valera-health-conformance.yml
+- type: Compliance
+  url: conformance/valera-health-conformance.yml
+- type: DomainSecurity
+  url: security/valera-health-domain-security.yml
+- type: LLMsTxt
+  url: llms/valera-health-llms.txt
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Valera Health is a virtual behavioral-health care provider, not a software vendor —
+    it runs on NextGen Healthcare for its clinical record and patient portal, publishes
+    no developer portal, docs subdomain or reference of any kind, and its only
+    externally addressable API host, api.valerahealth.com, is the private Node/Express
+    backend for its own patient app, which answered 404 for every discovery path probed.
+  evidence:
+  - url: https://api.valerahealth.com/openapi.json
+    status: 404
+  - url: https://api.valerahealth.com/graphql
+    status: 404
+  - url: https://www.valerahealth.com/llms.txt
+    status: 404
+  - url: https://www.valerahealth.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-09-02'

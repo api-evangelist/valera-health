@@ -1,0 +1,54 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Direct unauthenticated HTTP probes of the RFC 8615 well-known paths on every host
+  named in apis.yml plus the company's externally addressable API host
+  (api.valerahealth.com, the private backend for the Valera Health patient app).
+note: >-
+  Every probed path returned 404. www.valerahealth.com is a WordPress site whose 404
+  handler returns the themed HTML error page (Oxygen builder stylesheet), so the bodies
+  below are the site's own not-found page rather than a document. api.valerahealth.com
+  sits behind an AWS ALB and returns a 3,261-byte Express "Page Not Found" HTML body for
+  every well-known path. No document was served, so NO WellKnown or SecurityTxt pointer
+  is emitted in apis.yml — this file records a verified absence, not a presence.
+hosts:
+- host: www.valerahealth.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.valerahealth.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null

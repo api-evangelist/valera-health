@@ -1,0 +1,83 @@
+# Valera Health
+
+> Valera Health is a Brooklyn, New York based virtual behavioral health provider
+> delivering therapy, psychiatry, group therapy, comprehensive Dialectical Behavior
+> Therapy (DBT), suicide care and youth support programs to adults and children through
+> an in-house clinical team, a care-coordinator model and a patient mobile app.
+
+<!--
+generated: 2026-09-02
+method: generated
+source: apis.yml + repo artifacts + live probes of www.valerahealth.com (2026-09-02)
+authored-by: API Evangelist (https://apievangelist.com) — third-party profile, NOT
+published by Valera Health. Valera Health serves no /llms.txt of its own
+(https://www.valerahealth.com/llms.txt returned 404 on 2026-09-02).
+-->
+
+## What an agent can and cannot do here
+
+Valera Health is a care-delivery organization, not a software vendor. There is **no
+public API, no developer program, no SDK, no webhook surface and no machine-readable
+contract** of any kind. Nothing on this page can be called programmatically.
+
+- No OpenAPI, Swagger, AsyncAPI, GraphQL SDL or Postman collection is published.
+- No `/.well-known/` document is served on any Valera Health host (12 paths probed
+  across two hosts, all 404).
+- No MCP server and no A2A agent card exist.
+- `api.valerahealth.com` resolves (AWS ALB, Node/Express) but is the private backend for
+  the Valera Health patient application. It answers 404 for every documented and
+  undocumented discovery path and is not an integration surface.
+- The clinical record and patient portal are operated by **NextGen Healthcare** — the
+  site's own "Patient Portal" link targets a tenant path on `pxpportal.nextgen.com`,
+  which returned 404 to an unauthenticated probe on 2026-09-02. Any FHIR or HL7 surface
+  serving these patients belongs to that vendor, not to Valera Health.
+
+An agent asked to integrate with Valera Health should route the request to a human: the
+correct next step is the contact form, not a credential request.
+
+## Services
+
+- Individual therapy and psychiatry, delivered virtually by employed clinicians
+- Group therapy
+- Comprehensive Dialectical Behavior Therapy (DBT)
+- Suicide care
+- Youth Support Team (YST) programs for children and adolescents
+- Care-coordinator model: intake form, scheduling, then a dedicated care team
+
+## Company
+
+- [Website](https://www.valerahealth.com/): company home
+- [Our Services](https://www.valerahealth.com/our-services/): the clinical program list
+- [Clinical Team](https://www.valerahealth.com/clinical-team/): the in-house provider roster
+- [Insurance Plans](https://www.valerahealth.com/insurance-plans/): accepted coverage
+- [Billing and Insurance FAQs](https://www.valerahealth.com/billing-and-insurance-faqs/)
+- [Referrers and Partners](https://www.valerahealth.com/referrers-partners/): partner referral intake
+- [Help Center](https://www.valerahealth.com/help-center/)
+- [Contact](https://www.valerahealth.com/contact-us/)
+- [Blog](https://www.valerahealth.com/blog/)
+- [Careers](https://www.valerahealth.com/careers/)
+- [GitHub organization](https://github.com/valerahealth): exists, one public repository, a
+  2019 fork. No first-party source, no SDK.
+
+## Patient entry points (human, not programmatic)
+
+- [Patient onboarding form](https://forms.valerahealth.com/patient-onboarding)
+- [Patient referral form](https://forms.valerahealth.com/patient-referral)
+- [Patient portal guide](https://www.valerahealth.com/patient-portal-guide/): the portal itself is a NextGen Healthcare tenant, reachable only from Valera Health's own navigation
+- [Request medical records](https://www.valerahealth.com/request-medical-records/)
+
+## Legal and compliance
+
+- [Notice of Privacy Practices](https://www.valerahealth.com/notice-of-privacy-practices/): HIPAA covered entity
+- [Privacy Policy](https://www.valerahealth.com/privacy-policy/)
+- [Washington Consumer Health Data Privacy Policy](https://www.valerahealth.com/wa-consumer-health-data-privacy-policy/): My Health My Data Act
+- [Notice of Nondiscrimination](https://www.valerahealth.com/notice-of-nondiscrimination/): ACA Section 1557
+- [Terms of Use](https://www.valerahealth.com/terms-of-use/)
+- [Website Accessibility Statement](https://www.valerahealth.com/website-accessibility-statement/)
+
+## Optional
+
+- [API Evangelist](https://apievangelist.com): author of this file. The independent
+  third-party profile it was generated from — including the domain-security probe and
+  the conformance record — is published in the API Evangelist network catalog at
+  apis.io.

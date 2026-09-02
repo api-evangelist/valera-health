@@ -64,5 +64,8 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Valera Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Valera Health is a Brooklyn, New York based virtual behavioral health provider delivering therapy, psychiatry, group therapy, comprehensive Dialectical Behavior Therapy (DBT), suicide care and youth support programs to adults and children through an in-house clinical team, a care-coordinator model and a patient mobile app.
+
+It is a care-delivery organization rather than a software vendor. As of the 2026-09-02 enrichment pass, Valera Health publishes no developer program, no public API reference, and no machine-readable contract of any kind; its clinical record and patient portal are operated by NextGen Healthcare, and its only externally addressable API host, `api.valerahealth.com`, is the private backend for its own patient application.
+
+- https://www.valerahealth.com/

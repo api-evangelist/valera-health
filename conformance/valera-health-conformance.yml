@@ -1,0 +1,77 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  Valera Health's own published legal and compliance pages, fetched 2026-09-02.
+  No API contract exists to derive contract-level conformance from, so every entry
+  below is a document-level claim read off a live page on www.valerahealth.com.
+subject: Valera Health
+scope: >-
+  Organizational / regulatory conformance only. Valera Health publishes no OpenAPI,
+  AsyncAPI, GraphQL SDL or other machine-readable contract, so no API-protocol
+  conformance (oauth2, oidc, rfc9457, pagination, idempotency) can be asserted and
+  none is claimed here.
+regime: healthcare
+domain_standard:
+  claimed: false
+  note: >-
+    The behavioral-health domain standards worth probing for a care-delivery
+    organization are HL7 v2, FHIR R4 / US Core and the CMS Patient Access API.
+    None is declared: there is no contract to declare them in, no /fhir or
+    /metadata surface answers on any Valera Health host, and the company's clinical
+    record and patient portal are operated by NextGen Healthcare rather than by
+    Valera Health, so any FHIR surface serving these patients belongs to the vendor,
+    not to this provider. REWARD-ONLY check left unasserted rather than invented.
+conformance:
+- id: hipaa
+  name: HIPAA / HITECH (45 CFR Parts 160, 162, 164)
+  conforms: true
+  evidence:
+    type: published-notice
+    url: https://www.valerahealth.com/notice-of-privacy-practices/
+    http_status: 200
+    note: >-
+      Valera Health publishes a HIPAA Notice of Privacy Practices, the document a
+      covered entity is required by 45 CFR 164.520 to make available. Its presence
+      establishes that Valera Health operates as a HIPAA covered entity; it is not a
+      third-party audit or certification.
+- id: wa-my-health-my-data
+  name: Washington My Health My Data Act (RCW 19.373)
+  conforms: true
+  evidence:
+    type: published-notice
+    url: https://www.valerahealth.com/wa-consumer-health-data-privacy-policy/
+    http_status: 200
+    note: >-
+      A dedicated Washington consumer health data privacy policy, the separate,
+      distinctly-linked notice the MHMDA requires of a regulated entity.
+- id: section-1557-nondiscrimination
+  name: ACA Section 1557 nondiscrimination
+  conforms: true
+  evidence:
+    type: published-notice
+    url: https://www.valerahealth.com/notice-of-nondiscrimination/
+    http_status: 200
+- id: wcag-accessibility
+  name: Website accessibility statement
+  conforms: true
+  evidence:
+    type: published-statement
+    url: https://www.valerahealth.com/website-accessibility-statement/
+    http_status: 200
+- id: soc2
+  name: SOC 2
+  conforms: false
+  evidence:
+    type: absent
+    note: >-
+      No trust center, no SOC 2 / ISO 27001 / HITRUST certification page and no
+      security page were found. probe-security-programs.py returned
+      "vdp=none trust=none" on 2026-09-02; trust.valerahealth.com is NXDOMAIN.
+- id: coordinated-vulnerability-disclosure
+  name: Published vulnerability disclosure policy
+  conforms: false
+  evidence:
+    type: absent
+    url: https://www.valerahealth.com/.well-known/security.txt
+    http_status: 404
+    note: No security.txt, no bug bounty program, no /security disclosure page.
