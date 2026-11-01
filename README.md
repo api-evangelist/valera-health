@@ -64,8 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Valera Health is a Brooklyn, New York based virtual behavioral health provider delivering therapy, psychiatry, group therapy, comprehensive Dialectical Behavior Therapy (DBT), suicide care and youth support programs to adults and children through an in-house clinical team, a care-coordinator model and a patient mobile app.
+Valera Health is a Brooklyn, New York based virtual behavioral health provider delivering therapy, psychiatry, group therapy, comprehensive Dialectical Behavior Therapy (DBT), suicide care and youth support programs to adults and children through an in-house clinical team, a care-coordinator model and a patient mobile app. It is a care-delivery organization rather than a software vendor: revenue comes from commercial insurance, Medicaid and Medicare reimbursement, and the clinical record and patient portal run on third-party health IT (the patient portal is operated by NextGen Healthcare at pxpportal.nextgen.com). As of this profile Valera Health publishes no developer program, no public API reference, and no machine-readable contract of any kind; its only externally addressable API host, api.valerahealth.com, is the private backend for its own patient application.
 
-It is a care-delivery organization rather than a software vendor. As of the 2026-09-02 enrichment pass, Valera Health publishes no developer program, no public API reference, and no machine-readable contract of any kind; its clinical record and patient portal are operated by NextGen Healthcare, and its only externally addressable API host, `api.valerahealth.com`, is the private backend for its own patient application.
+**Areas:** Company · Health · Healthcare · Behavioral Health · Mental Health · Telehealth · Psychiatry · Digital Health
 
-- https://www.valerahealth.com/
+## Valera Health on APIs.io
+
+Everything profiled for Valera Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/valera-health/](https://apis.io/providers/valera-health/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Valera Health Domain Security](https://apis.io/security/valera-health/valera-health-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.valerahealth.com/)
+- [Support](https://www.valerahealth.com/contact-us/)
+- [Blog](https://www.valerahealth.com/blog/)
+- [Terms of service](https://www.valerahealth.com/terms-of-use/)
+- [Privacy policy](https://www.valerahealth.com/privacy-policy/)
+- [GitHub](https://github.com/valerahealth)
+
+## API Evangelist rating
+
+**Kin Score 16.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 28.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 18.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/valera-health/](https://apis.io/providers/valera-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Valera Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/valera-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
